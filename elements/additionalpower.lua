@@ -135,7 +135,7 @@ local function Update(self, event, unit, powertype)
 	* max  - the maximum value of the player's additional power (number)
 	--]]
 	if(element.PostUpdate) then
-		return element:PostUpdate(unit, cur, max, event) -- ElvUI adds event
+		return element:PostUpdate(unit, cur, max)
 	end
 end
 
