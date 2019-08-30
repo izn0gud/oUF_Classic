@@ -42,12 +42,12 @@ local function Update(self, event)
 	end
 
 	local role, isShown
-	if(UnitInRaid(unit) and not UnitHasVehicleUI(unit)) then
-		if(GetPartyAssignment('MAINTANK', unit)) then
+	if UnitInRaid(unit) then
+		if (GetPartyAssignment('MAINTANK', unit)) then
 			isShown = true
 			element:SetTexture(MAINTANK_ICON)
 			role = 'MAINTANK'
-		elseif(GetPartyAssignment('MAINASSIST', unit)) then
+		elseif (GetPartyAssignment('MAINASSIST', unit)) then
 			isShown = true
 			element:SetTexture(MAINASSIST_ICON)
 			role = 'MAINASSIST'
